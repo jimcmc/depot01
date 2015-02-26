@@ -26,4 +26,17 @@ Depot::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:            "smtp.126.com",
+    port:               587,
+    domain:             "sohu.com",
+    authentication:     "plain",
+    user_name:          "ebook_123",
+    password:           "19819290",
+    enable_starttls_auto: true
+  }
+  
+
 end
